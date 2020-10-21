@@ -1,13 +1,18 @@
 <template>
   <div id="app">
-    <h1>h</h1>
+    <button @click="upload">dsdd</button>
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'App'
+  name: 'App',
+  methods: {
+    upload () {
+      alert('aaaaa')
+    }
+  }
 }
 </script>
 

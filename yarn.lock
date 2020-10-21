@@ -2729,6 +2729,13 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   resolved "http://r.tnpm.oa.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
+cos-js-sdk-v5@^1.0.1:
+  version "1.0.1"
+  resolved "http://r.tnpm.oa.com/cos-js-sdk-v5/-/cos-js-sdk-v5-1.0.1.tgz#01cefe15c9489e52230c583acea454e8d38b9860"
+  integrity sha512-7wr2jWCwa81efkRRxm+gijkrjtG2FS7l1+abBxWszfVuM9Fi+TOdYL+q3b9j5+3jmMZ+lL8qgy0gJvzOR5dlcw==
+  dependencies:
+    xmldom "^0.1.31"
+
 cosmiconfig@^5.0.0:
   version "5.2.1"
   resolved "http://r.tnpm.oa.com/cosmiconfig/-/cosmiconfig-5.2.1.tgz#040f726809c591e77a17c0a3626ca45b4f168b1a"
@@ -8670,6 +8677,11 @@ ws@^6.0.0, ws@^6.2.1:
   integrity sha512-GIyAXC2cB7LjvpgMt9EKS2ldqr0MTrORaleiOno6TweZ6r3TKtoFQWay/2PceJ3RuBasOHzXNn5Lrw1X0bEjqA==
   dependencies:
     async-limiter "~1.0.0"
+
+xmldom@^0.1.31:
+  version "0.1.31"
+  resolved "http://r.tnpm.oa.com/xmldom/-/xmldom-0.1.31.tgz#b76c9a1bd9f0a9737e5a72dc37231cf38375e2ff"
+  integrity sha512-yS2uJflVQs6n+CyjHoaBmVSqIDevTAWrzMmjG1Gc7h1qQ7uVozNhEPJAwZXWyGQ/Gafo3fCwrcaokezLPupVyQ==
 
 xtend@^4.0.0, xtend@~4.0.1:
   version "4.0.2"

@@ -9,6 +9,7 @@ verify_ssl = true
 djangorestframework = "*"
 django = "*"
 cos-python-sdk-v5 = "*"
+requests = "*"
 
 [requires]
 python_version = "3.9"

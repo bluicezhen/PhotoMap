@@ -1,7 +1,6 @@
 from django.contrib.auth.models import User
 from rest_framework.views import APIView
 
-from backend.tools import HTTPException
 from backend.tools.exceptions import LoginFailedException
 
 

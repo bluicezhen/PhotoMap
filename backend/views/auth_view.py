@@ -1,28 +1,29 @@
-from django.contrib.auth.models import User
-from rest_framework.views import APIView
+from typing import TYPE_CHECKING
 
+from django.contrib.auth import authenticate, login
+from rest_framework.views import APIView
+from rest_framework.response import Response
+
+from backend.serializers import AuthSerializer
 from backend.tools.exceptions import LoginFailedException
+
+if TYPE_CHECKING:
+    from rest_framework.request import Request
 
 
 class AuthView(APIView):
     @staticmethod
-    def post(request, *args, **kwargs):
+    def post(request: 'Request', *args, **kwargs):
         """Login
-
-        :param request:
-        :param args:
-        :param kwargs:
-        :return:
+        For Test: {"username":"admin", "password":"7777"}
         """
-        username: str = request.data.get('username')
-        password: str = request.data.get('password')
+        auth_serializer = AuthSerializer(data=request.data)
+        auth_serializer.is_valid(raise_exception=True)
+        request_data = auth_serializer.validated_data
 
-        try:
-            user = User.objects.get(username=username)
-        except User.DoesNotExist:
+        user = authenticate(username=request_data['username'], password=request_data['password'])
+        if user is not None:
+            login(request, user)
+            return Response('ok')
+        else:
             raise LoginFailedException()
-
-        if user.check_password(password):
-            return 'ok'
-
-        raise LoginFailedException()

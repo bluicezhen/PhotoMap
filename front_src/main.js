@@ -2,6 +2,7 @@ import App from './App.vue'
 import ElementUI from 'element-ui'
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
+import backend from './tools/backend'
 import router from './router.js'
 import langEn from './lang/en'
 import langZh from './lang/zh'
@@ -20,6 +21,7 @@ const i18n = new VueI18n({
 })
 
 Vue.config.productionTip = false
+Vue.prototype.$backend = backend
 
 new Vue({
   router,

@@ -7,6 +7,6 @@ export default {
    * @param password {string}
    */
   login_post (username, password) {
-
+    return ajax('POST', '/api/auth/', { bodyParams: { username, password } })
   }
 }

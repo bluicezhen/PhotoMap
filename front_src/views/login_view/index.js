@@ -20,7 +20,7 @@ export default {
       try {
         await this.$backend.login_post(this.loginData.username, this.loginData.password)
         this.$message.success(`${this.$t('login')} ${this.$t('success')}`)
-        await this.$router.push('homepage')
+        await this.$router.replace({ path: '/' })
       } catch (e) {
         // pass
       }

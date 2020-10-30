@@ -1,5 +1,6 @@
 import axios from 'axios'
 import getCookie from './get_cookie'
+import { Message } from 'element-ui'
 
 /**
  * Send HTTP request
@@ -29,11 +30,11 @@ export default async function (method, url, { bodyParams = {}, urlParams = {} })
       withCredentials: true
     })
   } catch (e) {
-    console.log('.......', e.response)
     if (e.response.status === 403) {
       console.log('-------- Will turn to login page')
     } else {
-      console.log('-------- Will show error message')
+      Message.error(e.response.data.detail)
+      throw e
     }
   }
 }

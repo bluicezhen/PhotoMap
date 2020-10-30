@@ -9,8 +9,21 @@ export default {
   },
   methods: {
     async handleChickLogin () {
-      const res = await this.$backend.login_post(this.loginData.username, this.loginData.password)
-      console.log(res)
+      if (this.loginData.username.length === 0) {
+        this.$message.error(`${this.$t('username')}${this.$t('cannot_be_blank')}`)
+        return
+      }
+      if (this.loginData.password.length === 0) {
+        this.$message.error(`${this.$t('password')}${this.$t('cannot_be_blank')}`)
+        return
+      }
+      try {
+        await this.$backend.login_post(this.loginData.username, this.loginData.password)
+        this.$message.success(`${this.$t('login')} ${this.$t('success')}`)
+        await this.$router.push('homepage')
+      } catch (e) {
+        // pass
+      }
     }
   }
 }

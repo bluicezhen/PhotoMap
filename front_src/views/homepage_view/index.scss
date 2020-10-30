@@ -1,0 +1,22 @@
+@import "../../tools/basic";
+
+$top-bar-height: 50px;
+
+.homepage-view {
+  width: 100%;
+  height: 100vh;
+
+  .top-bar {
+    border-bottom-color: $border-color-l1;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    height: $top-bar-height;
+    padding: 0 10px 0 10px;
+
+    .top-bar-item {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

@@ -10,6 +10,9 @@ djangorestframework = "*"
 django = "*"
 cos-python-sdk-v5 = "*"
 requests = "*"
+# pycryptodome is cos-python-sdk-v5's requied. you should uninstall it when uninstalling cos-python-sdk-v5
+pycryptodome = "==3.9.8"
+qcloud-python-sts = "*"
 
 [requires]
 python_version = "3.9"

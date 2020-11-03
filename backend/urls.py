@@ -3,13 +3,14 @@ from django.conf.urls import include, url
 from rest_framework.routers import DefaultRouter
 
 from backend.settings import DEBUG
-from backend.views import AuthView, PhotoView, WebpageView
+from backend.views import AuthView, PhotoView, TencentCOSCredentialsView, WebpageView
 
 router = DefaultRouter()
 router.register(r'photo', PhotoView)
 
 urlpatterns = [
     url('^api/auth/', AuthView.as_view()),
+    url('^api/tencent/cos/credentials', TencentCOSCredentialsView.as_view()),
     url('^api/', include(router.urls)),
     url('^admin/', admin.site.urls),
 ]

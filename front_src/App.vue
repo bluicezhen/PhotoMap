@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <input type="file" id="input-upload">
     <router-view :key="$route.path"></router-view>
   </div>
 </template>
@@ -16,7 +17,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 body {
   margin: 0;
   padding: 0;
@@ -27,5 +28,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+#input-upload {
+  display: none;
 }
 </style>

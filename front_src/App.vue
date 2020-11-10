@@ -1,21 +1,9 @@
 <template>
   <div id="app">
-    <input type="file" id="input-upload">
+    <ImageUpload></ImageUpload>
     <router-view :key="$route.path"></router-view>
   </div>
 </template>
-
-<script>
-
-export default {
-  name: 'App',
-  methods: {
-    upload () {
-      alert('aaaaa')
-    }
-  }
-}
-</script>
 
 <style lang="scss">
 body {

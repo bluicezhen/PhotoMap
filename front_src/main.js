@@ -8,6 +8,8 @@ import langEn from './lang/en'
 import langZh from './lang/zh'
 import 'element-ui/lib/theme-chalk/index.css'
 
+import ImgUploadComponent from './components/img_upload/index.vue'
+
 Vue.use(ElementUI)
 Vue.use(VueI18n)
 
@@ -22,6 +24,8 @@ const i18n = new VueI18n({
 
 Vue.config.productionTip = false
 Vue.prototype.$backend = backend
+
+Vue.component('ImageUpload', ImgUploadComponent)
 
 new Vue({
   router,

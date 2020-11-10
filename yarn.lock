@@ -2819,10 +2819,10 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   resolved "http://r.tnpm.oa.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
-cos-js-sdk-v5@^1.0.1:
-  version "1.0.1"
-  resolved "http://r.tnpm.oa.com/cos-js-sdk-v5/-/cos-js-sdk-v5-1.0.1.tgz#01cefe15c9489e52230c583acea454e8d38b9860"
-  integrity sha512-7wr2jWCwa81efkRRxm+gijkrjtG2FS7l1+abBxWszfVuM9Fi+TOdYL+q3b9j5+3jmMZ+lL8qgy0gJvzOR5dlcw==
+cos-js-sdk-v5@^1.0.4:
+  version "1.0.4"
+  resolved "http://r.tnpm.oa.com/cos-js-sdk-v5/-/cos-js-sdk-v5-1.0.4.tgz#2d4fca9c829cbfdbbb39d63018063890a9486ef3"
+  integrity sha512-E82Ymc44UhDMc0kJxr0bhhnRvA2o6di00rEvJIyF6TnpPZHvRJZyVyEUVn2myaB6o99KQhuSV/cWQzEWYpeFeg==
   dependencies:
     xmldom "^0.1.31"
 
@@ -3890,6 +3890,13 @@ execa@^3.3.0:
     p-finally "^2.0.0"
     signal-exit "^3.0.2"
     strip-final-newline "^2.0.0"
+
+exifreader@^3.12.3:
+  version "3.12.3"
+  resolved "http://r.tnpm.oa.com/exifreader/-/exifreader-3.12.3.tgz#92eaacbc8ec3dbcdf641d61378eeae16b0fc50b3"
+  integrity sha512-8CtkjDC8xcREleBoFE1xZzkbaEiuLngORo6Xbxn3rPl/NTznTFHK0F9zg5bz5nwWmGDfPArPUXpUyJeHQHy+fA==
+  optionalDependencies:
+    xmldom "^0.1.31"
 
 expand-brackets@^2.1.4:
   version "2.1.4"

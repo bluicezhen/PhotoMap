@@ -12,3 +12,9 @@ class PhotoView(CreateModelMixin, ListModelMixin, GenericViewSet):
     permission_classes = (IsAuthenticated,)
     queryset = PhotoModel.objects
     serializer_class = PhotoSerializer
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+
+        # User can only get the photo themself.
+        return queryset.filter(user=self.request.user)

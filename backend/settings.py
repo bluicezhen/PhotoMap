@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'django_filters',
     'backend'
 ]
 
@@ -126,3 +127,9 @@ TENCENT_SECRET_ID = os.getenv('TENCENT_SECRET_ID')
 TENCENT_SECRET_KEY = os.getenv('TENCENT_SECRET_KEY')
 TENCENT_COS_REGION = os.getenv('TENCENT_COS_REGION')
 TENCENT_COS_BUCKET = os.getenv('TENCENT_COS_BUCKET')
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': (
+        'django_filters.rest_framework.DjangoFilterBackend',
+    ),
+}
